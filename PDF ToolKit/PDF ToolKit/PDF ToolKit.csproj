@@ -46,10 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GenerateBlankPage.cs">
+    <Compile Include="Forms\GenerateTestPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GenerateBlankPage.Designer.cs">
+    <Compile Include="Forms\GenerateTestPage.Designer.cs">
+      <DependentUpon>GenerateTestPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GenerateBlankPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GenerateBlankPage.Designer.cs">
       <DependentUpon>GenerateBlankPage.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -60,7 +66,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GenerateBlankPage.resx">
+    <EmbeddedResource Include="Forms\GenerateBlankPage.resx">
       <DependentUpon>GenerateBlankPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -87,6 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\modlib\modlib.csproj">
+      <Project>{7779dde3-662e-4ccf-911e-62a0262fd8d8}</Project>
+      <Name>modlib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

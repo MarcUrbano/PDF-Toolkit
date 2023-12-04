@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using modlib;
 
 namespace PDF_ToolKit
 {
@@ -19,8 +20,14 @@ namespace PDF_ToolKit
 
         private void blankToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GenerateBlankPage gblank = new GenerateBlankPage();
-            gblank.Show();
+            GenerateBlankPage _generateBlank = new GenerateBlankPage();
+            _generateBlank.Show();
+        }
+
+        private void testFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Forms.GenerateTestPage _generateTestPage = new Forms.GenerateTestPage();
+            _generateTestPage.Show();
         }
     }
 }
